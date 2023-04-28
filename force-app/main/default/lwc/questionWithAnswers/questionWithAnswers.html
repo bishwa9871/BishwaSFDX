@@ -1,0 +1,51 @@
+<template>
+    <!-- <lightning-card title={account}>
+        <template if:true={hasContacts}>
+            <template for:each={account.Contacts} for:item="contact">
+                <p key={contact.Id}>{contact.Name} - {contact.Email}</p>
+            </template>
+        </template>
+        <template if:true={contacts.error}>
+            <p>{contacts.error}</p>
+        </template>
+    </lightning-card> -->
+    <!-- <div>
+        <h1>{question.Name}</h1>
+        <p>{question.Description__c}</p>
+        <div>
+          <template for:each={answers} for:item="answer">
+            <div key={answer.Id}>
+              <p>{answer.Answer__c}</p>
+              <p>Rating: {answer.Rating__c}</p>
+              <button onclick={handleUpvote}>Upvote</button>
+              <button onclick={handleDownvote}>Downvote</button>
+              <template if:true={isQuestionCreator}>
+                <button onclick={handleBestAnswerSelection}>Select as best answer</button>
+              </template>
+            </div>
+          </template>
+        </div>
+      </div> -->
+      <!-- <lightning-card>
+        <lightning-datatable
+            key-field = "id"
+            data = {results.data}
+            columns = {columns}
+            >
+        </lightning-datatable>
+      </lightning-card> -->
+<lightning-layout>
+  <lightning-layout-item padding="aound-small" size="2">
+      <lightning-card title="Question List">
+      <template for:each={accounts.data} for:item="actObj" for:index="index">
+        <p key={actObj.Id} class="slds-p-horizontal-small">
+          <a href="#" onclick={handleClick} data-accountid= {actObj.Id}>{actObj.Name}</a>
+        </p>
+      </template>
+    </lightning-card>
+  </lightning-layout-item>
+    <lightning-layout-item padding="aound-small" size="10">
+    <c-answer-list account-id={accountId}></c-answer-list>
+  </lightning-layout-item>
+  </lightning-layout>
+</template>

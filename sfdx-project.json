@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "QuestionAnswers",
+  "namespace": "",
+  "sfdcLoginUrl": "https://meet4solution-dev-ed.develop.my.salesforce.com/",
+  "sourceApiVersion": "56.0"
+}
